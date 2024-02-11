@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="website"><head>
+    
+    <script src="https://kit.fontawesome.com/2bf9c82760.js" crossorigin="anonymous"></script>
+    
+    <style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}
+/* Overlay styles */
+.overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    /* Video styles */
+    .video-container {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    /* Close button styles */
+    .close-btn {
+        position: absolute;
+        top: -26px;
+        right: -39px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 35px;
+    }
+
+
+    </style>
+    
+    <style>.LGLeeN-keyboard-shortcuts-view{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex}.LGLeeN-keyboard-shortcuts-view table,.LGLeeN-keyboard-shortcuts-view tbody,.LGLeeN-keyboard-shortcuts-view td,.LGLeeN-keyboard-shortcuts-view tr{background:inherit;border:none;margin:0;padding:0}.LGLeeN-keyboard-shortcuts-view table{display:table}.LGLeeN-keyboard-shortcuts-view tr{display:table-row}.LGLeeN-keyboard-shortcuts-view td{-moz-box-sizing:border-box;box-sizing:border-box;display:table-cell;color:#000;padding:6px;vertical-align:middle;white-space:nowrap}.LGLeeN-keyboard-shortcuts-view td:first-child{text-align:end}.LGLeeN-keyboard-shortcuts-view td kbd{background-color:#e8eaed;border-radius:2px;border:none;-moz-box-sizing:border-box;box-sizing:border-box;color:inherit;display:inline-block;font-family:Google Sans Text,Roboto,Arial,sans-serif;line-height:16px;margin:0 2px;min-height:20px;min-width:20px;padding:2px 4px;position:relative;text-align:center}
+</style><style>.gm-control-active>img{-webkit-box-sizing:content-box;box-sizing:content-box;display:none;left:50%;pointer-events:none;position:absolute;top:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.gm-control-active>img:nth-child(1){display:block}.gm-control-active:focus>img:nth-child(1),.gm-control-active:hover>img:nth-child(1),.gm-control-active:active>img:nth-child(1),.gm-control-active:disabled>img:nth-child(1){display:none}.gm-control-active:focus>img:nth-child(2),.gm-control-active:hover>img:nth-child(2){display:block}.gm-control-active:active>img:nth-child(3){display:block}.gm-control-active:disabled>img:nth-child(4){display:block}sentinel{}
+</style><link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700|Google+Sans+Text:400&amp;lang=en"><link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans+Text:400&amp;text=%E2%86%90%E2%86%92%E2%86%91%E2%86%93&amp;lang=en"><style>.gm-ui-hover-effect{opacity:.6}.gm-ui-hover-effect:hover{opacity:1}.gm-ui-hover-effect>span{background-color:#000}@media (forced-colors:active),(prefers-contrast:more){.gm-ui-hover-effect>span{background-color:ButtonText}}sentinel{}
+</style><style>.gm-style .gm-style-cc a,.gm-style .gm-style-cc button,.gm-style .gm-style-cc span,.gm-style .gm-style-mtc div{font-size:10px;-webkit-box-sizing:border-box;box-sizing:border-box}.gm-style .gm-style-cc a,.gm-style .gm-style-cc button,.gm-style .gm-style-cc span{outline-offset:3px}sentinel{}
+</style><style>@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style>.dismissButton{background-color:#fff;border:1px solid #dadce0;color:#1a73e8;border-radius:4px;font-family:Roboto,sans-serif;font-size:14px;height:36px;cursor:pointer;padding:0 24px}.dismissButton:hover{background-color:rgba(66,133,244,.04);border:1px solid #d2e3fc}.dismissButton:focus{background-color:rgba(66,133,244,.12);border:1px solid #d2e3fc;outline:0}.dismissButton:focus:not(:focus-visible){background-color:#fff;border:1px solid #dadce0;outline:none}.dismissButton:focus-visible{background-color:rgba(66,133,244,.12);border:1px solid #d2e3fc;outline:0}.dismissButton:hover:focus{background-color:rgba(66,133,244,.16);border:1px solid #d2e2fd}.dismissButton:hover:focus:not(:focus-visible){background-color:rgba(66,133,244,.04);border:1px solid #d2e3fc}.dismissButton:hover:focus-visible{background-color:rgba(66,133,244,.16);border:1px solid #d2e2fd}.dismissButton:active{background-color:rgba(66,133,244,.16);border:1px solid #d2e2fd;-webkit-box-shadow:0 1px 2px 0 rgba(60,64,67,.3),0 1px 3px 1px rgba(60,64,67,.15);box-shadow:0 1px 2px 0 rgba(60,64,67,.3),0 1px 3px 1px rgba(60,64,67,.15)}.dismissButton:disabled{background-color:#fff;border:1px solid #f1f3f4;color:#3c4043}sentinel{}
+</style><style>.gm-style-moc{background-color:rgba(0,0,0,.45);pointer-events:none;text-align:center;-webkit-transition:opacity ease-in-out;transition:opacity ease-in-out}.gm-style-mot{color:white;font-family:Roboto,Arial,sans-serif;font-size:22px;margin:0;position:relative;top:50%;transform:translateY(-50%);-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%)}sentinel{}
+</style><style>.gm-style img{max-width: none;}.gm-style {font: 400 11px Roboto, Arial, sans-serif; text-decoration: none;}</style><style type="text/css">[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    
+    <meta charset="utf-8">
+<title>Home</title>
+<link rel="SHORTCUT ICON" href="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-favicon.ico?_build=1707577683" type="image/vnd.microsoft.icon">
+<link rel="stylesheet" href="style.css">
+
+                            
+<link rel="canonical" href="https://template82058.motopreview.com/">
+<meta property="og:title" content="Home">
+<meta property="og:url" content="https://template82058.motopreview.com/">
+<meta property="og:type" content="website">
+                    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+                
+
+
+
+    <link rel="preload" as="font" type="font/woff2" crossorigin="" href="https://template82058.motopreview.com/mt-includes/fonts/fontawesome-webfont.woff2?v=4.7.0">
+<link rel="stylesheet" href="https://template82058.motopreview.com/mt-includes/css/assets.min.css?_build=1668882370">
+<style>
+@import url(//fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&subset=latin);
+</style>
+<link rel="stylesheet" href="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/assets/styles.css?_build=1668888068" id="moto-website-style">
+    
+
+
+
+
+
+
+
+</head>
+<body class="moto-background moto-website_live moto-browser_chrome">
+
+
+
+            
+
+
+<div class="page">
+
+
+<section id="section-content" class="content page-1 moto-section" data-widget="section" data-container="section">
+                                    <div class="moto-widget moto-widget-block moto-bg-color2_3 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="block" data-spacing="aaaa" style="background-image:url(https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-bg1.png);background-position:right bottom;background-repeat:no-repeat;background-size:contain;" data-bg-position="right bottom" data-bg-image="2019/06/mt-1829-home-bg1.png"><div class="moto-background-video-container moto-absolute-position__container" data-moto-background-video="{&quot;class&quot;:&quot;moto-background-video moto-absolute-position moto-absolute-position_right-bottom&quot;,&quot;bgVideo&quot;:{&quot;loop&quot;:true,&quot;preload&quot;:&quot;metadata&quot;,&quot;track&quot;:{&quot;webm&quot;:null,&quot;mp4&quot;:{&quot;path&quot;:&quot;2019\/06\/bg-1_2.mp4&quot;,&quot;name&quot;:&quot;Bg 1_2.mp4&quot;}},&quot;position&quot;:&quot;right bottom&quot;}}">
+<video class="moto-background-video moto-absolute-position moto-absolute-position_right-bottom moto-absolute-cover-element_fill-by-height" muted="" playsinline="" preload="metadata" loop="">
+                    <source type="video/mp4" src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/bg-1_2.mp4">
+    </video>
+</div>
+
+
+<div class="container-fluid">
+<div class="row">
+    <div class="moto-cell col-sm-12" data-container="container">
+        
+    <div class="moto-widget moto-widget-container moto-background-fixed moto-container_content_5d00c7c41" data-widget="container" data-container="container" data-css-name="moto-container_content_5d00c7c41" data-bg-position="right bottom">
+
+
+
+<div class="moto-widget moto-widget-container moto-container_content_5cf7c7b11" data-widget="container" data-container="container" data-css-name="moto-container_content_5cf7c7b11" data-bg-position="left top">
+
+
+
+<div class="moto-widget moto-widget-container moto-container_content_5cf7c7c12" data-widget="container" data-container="container" data-css-name="moto-container_content_5cf7c7c12" data-bg-position="left bottom">
+
+
+
+<div data-widget-id="wid_1559742519_d82ia4ecs" class="moto-widget moto-widget-spacer moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto " data-widget="spacer" data-preset="default" data-spacing="saaa" data-visible-on="+desktop,tablet,mobile-h,mobile-v">
+<div class="moto-widget-spacer-block" style="height:10px"></div>
+</div><div class="moto-widget moto-widget-container undefined moto-container_content_5f0d80a91 moto-sticky__bootstrapped" data-visible-on="" data-widget="container" data-container="container" data-css-name="moto-container_content_5f0d80a91" data-bg-position="left top" data-moto-sticky="{}">
+
+
+
+<div class="moto-widget moto-widget-row row-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto moto-justify-content_center" data-grid-type="sm" data-widget="row" data-spacing="aasa" style="" data-bg-position="left top" data-visible-on="-">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-4 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+<div class="moto-widget moto-widget-row row-gutter-0 moto-justify-content_center moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="xs" data-widget="row" data-spacing="saaa" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-xs-2 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+<div data-widget-id="wid_1559742442_t51qdyk2i" class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-default  moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto  " data-widget="image">
+                <a href="/" data-action="page" class="moto-widget-image-link moto-link">
+        <img data-src="logo.png" src="logo.png" class="moto-widget-image-picture moto-widget-deferred-content lazyloaded" data-id="155" title="" alt="">
+    </a>
+    </div></div><div class="moto-widget moto-widget-row__column moto-cell col-xs-10 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+<div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-small" data-widget="text" data-preset="default" data-spacing="aaas" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><p class="moto-text_system_1"><a target="_self" data-action="page" data-id="1" class="moto-link" href="/">Harmony <span class="moto-color5_5">Beats</span></a></p></div>
+</div></div>
+
+        
+    
+</div>
+</div>
+</div></div><div class="moto-widget moto-widget-row__column moto-cell col-sm-8 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+<div data-widget-id="wid_1559742538_g4s5ivaua" class="moto-widget moto-widget-menu moto-preset-default moto-align-right moto-align-center_mobile-h moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-preset="default" data-widget="menu">
+    <a href="#" class="moto-widget-menu-toggle-btn"><i class="moto-widget-menu-toggle-btn-icon fa fa-bars"></i></a>
+<ul class="moto-widget-menu-list moto-widget-menu-list_horizontal">
+    <li class="moto-widget-menu-item">
+<a href="/#about" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-widget-menu-link-active moto-link">ABOUT</a>
+</li><li class="moto-widget-menu-item">
+<a href="/#ads bar" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-widget-menu-link-active moto-link">ADS BAR</a>
+</li><li class="moto-widget-menu-item">
+<a href="/#contacts" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-widget-menu-link-active moto-link">CONTACTS</a>
+</li><li class="moto-widget-menu-item moto-widget-menu-item-has-submenu">
+<a class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-widget-menu-link-submenu moto-link">ALL BLOCKS<span class="fa moto-widget-menu-link-arrow"></span></a>
+        <ul class="moto-widget-menu-sublist">
+            <li class="moto-widget-menu-item">
+<a href="/#about" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-widget-menu-link-active moto-link">About</a>
+</li>
+            <li class="moto-widget-menu-item">
+<a href="/#ads bar" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-widget-menu-link-active moto-link">Ads bar</a>
+</li>
+            <li class="moto-widget-menu-item">
+<a href="/#team" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-widget-menu-link-active moto-link">Team</a>
+</li>
+            <li class="moto-widget-menu-item">
+<a href="/#benefits" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-widget-menu-link-active moto-link">Benefits</a>
+</li>
+            <li class="moto-widget-menu-item">
+<a href="/#testimonials" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-widget-menu-link-active moto-link">Testimonials</a>
+</li>
+            <li class="moto-widget-menu-item">
+<a href="/#contacts" data-action="page" class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-widget-menu-link-active moto-link">Contacts</a>
+</li>
+    </ul>
+
+</li>        </ul>
+</div></div>
+
+        
+    
+</div>
+</div>
+</div></div><div class="moto-sticky-pseudo-element" style="display: none; height: 114px; width: 657px;"></div><div class="moto-widget moto-widget-row row-fixed moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="laaa" style="" data-bg-position="right">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-6 moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="mama" data-bg-position="left top">
+
+
+<div data-widget-id="wid_1559743310_cnlt0ivtg" class="moto-widget moto-widget-spacer moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto moto-visible-on_mobile-h_hidden moto-visible-on_mobile-v_hidden" data-widget="spacer" data-preset="default" data-spacing="saaa" data-visible-on="+desktop,tablet">
+<div class="moto-widget-spacer-block" style="height:10px"></div>
+</div><div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aaaa" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><h1 class="moto-text_system_4">Monitoring Your Daily Life</h1><p>&nbsp;</p></div>
+</div><div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-small moto-spacing-right-medium moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="smaa" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><p class="moto-text_system_9">Our software platform and custom development allow healthcare<br>institutions to create comprehensive cross-platform&nbsp; solutions that ensure positive patient experiences.</p></div>
+</div><div data-widget-id="wid_1559742994_zp22wj6mf" class="moto-widget moto-widget-spacer moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto " data-widget="spacer" data-preset="default" data-spacing="sasa" data-visible-on="+desktop,tablet,mobile-h,mobile-v">
+<div class="moto-widget-spacer-block" style="height:10px"></div>
+</div><div data-widget-id="wid_1559742965_xafvr2zr7" class="moto-widget moto-widget-button moto-preset-default moto-preset-provider-default moto-align-left moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto  " data-widget="button">
+    <a href="#" data-action="popup" data-popup-id="8" class="moto-widget-button-link moto-size-medium moto-link"><span class="fa moto-widget-theme-icon"></span><span class="moto-widget-button-divider"></span><span class="moto-widget-button-label">BUY NOW</span></a>
+</div></div><div class="moto-widget moto-widget-row__column moto-cell col-sm-6 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="top"><div class="moto-background-video-container moto-absolute-position__container" data-moto-background-video="{&quot;class&quot;:&quot;moto-background-video moto-absolute-position moto-absolute-position_top&quot;,&quot;bgVideo&quot;:{&quot;loop&quot;:true,&quot;preload&quot;:&quot;metadata&quot;,&quot;track&quot;:{&quot;webm&quot;:null,&quot;mp4&quot;:{&quot;path&quot;:&quot;2019\/06\/comp-1_5_1.mp4&quot;,&quot;name&quot;:&quot;Comp 1_5_1.mp4&quot;}},&quot;position&quot;:&quot;top&quot;}}">
+    <video class="moto-background-video moto-absolute-position moto-absolute-position_top moto-absolute-cover-element_fill-by-height" muted="" playsinline="" autoplay loop="">
+                            <source type="video/mp4" src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/comp-1_5_1.mp4">
+            </video>
+</div>
+    
+    
+<div data-widget-id="wid_1560153259_dkl6l31za" class="moto-widget moto-widget-spacer moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto " data-widget="spacer" data-preset="default" data-spacing="aaaa" data-visible-on="+desktop,tablet,mobile-h,mobile-v">
+    <div class="moto-widget-spacer-block" style="height:420px"></div>
+</div><div data-widget-id="wid_1560153468_zlqxydjye" class="moto-widget moto-widget-spacer moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto moto-visible-on_tablet_hidden moto-visible-on_mobile-h_hidden moto-visible-on_mobile-v_hidden" data-widget="spacer" data-preset="default" data-spacing="aaaa" data-visible-on="+desktop">
+    <div class="moto-widget-spacer-block" style="height:220px"></div>
+</div></div>
+
+        
+    
+</div>
+</div>
+</div></div></div></div></div>
+</div>
+</div>
+</div><div class="moto-widget moto-widget-block moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="block" data-spacing="aaaa" style="" data-bg-position="left top"><a class="moto-anchor" name="about"></a>
+
+
+<div class="container-fluid">
+<div class="row">
+    <div class="moto-cell col-sm-12" data-container="container">
+        
+    <div class="moto-widget moto-widget-row row-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="aaaa" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-6 moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="background-image:url(https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-watch1.png);background-position:left bottom;background-repeat:no-repeat;background-size:contain;" data-widget="row.column" data-container="container" data-spacing="laaa" data-bg-position="left bottom" data-bg-image="2019/06/mt-1829-home-watch1.png">
+
+
+<div data-widget-id="wid_1559743526_gu231uxft" class="moto-widget moto-widget-spacer moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto " data-widget="spacer" data-preset="default" data-spacing="aaaa" data-visible-on="+desktop,tablet,mobile-h,mobile-v">
+<div class="moto-widget-spacer-block" style="height:300px"></div>
+</div></div><div class="moto-widget moto-widget-row__column moto-cell col-sm-6 moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="laaa" data-bg-position="left top">
+
+
+<div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aaaa" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><p class="moto-text_system_8">ONE SWIPE AWAY</p><h2 class="moto-text_system_6">Everything you need</h2></div>
+</div><div class="moto-widget moto-widget-row row-gutter-0 moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-grid-type="xs" data-widget="row" data-spacing="masa" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-xs-2 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+<div data-widget-id="wid_1559743600_q2lfbnq74" class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-default  moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto  " data-widget="image">
+                <span class="moto-widget-image-link">
+        <img data-src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-icon1.png" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0  '%3E%3C/svg%3E" class="moto-widget-image-picture moto-widget-deferred-content lazyload" data-id="146" title="" alt="">
+    </span>
+    </div></div><div class="moto-widget moto-widget-row__column moto-cell col-xs-10 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+<div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-small" data-widget="text" data-preset="default" data-spacing="aaas" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><h3 class="moto-text_system_7">Heart Rate Monitor</h3><p class="moto-text_normal">&nbsp;</p><p class="moto-text_normal">Progressively expedite bleeding-edge catalysts for change via resource sucking channels. Energistically expedite.</p></div>
+</div></div>
+
+        
+    
+</div>
+</div>
+</div><div class="moto-widget moto-widget-row row-gutter-0 moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-grid-type="xs" data-widget="row" data-spacing="sasa" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-xs-2 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+
+    <div data-widget-id="wid_1559743664_a5ndh6wzk" class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-default  moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto  " data-widget="image">
+                <span class="moto-widget-image-link">
+        <img data-src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-icon2.png" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0  '%3E%3C/svg%3E" class="moto-widget-image-picture moto-widget-deferred-content lazyload" data-id="145" title="" alt="">
+    </span>
+    </div>
+
+
+</div>
+
+        
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-xs-10 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+
+    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-small" data-widget="text" data-preset="default" data-spacing="aaas" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><h3 class="moto-text_system_7">Step Counter</h3><p class="moto-text_normal">&nbsp;</p><p class="moto-text_normal">Dynamically transform multimedia based portals vis-a-vis proactive e-commerce. Rapidiously plagiarize extensible.</p></div>
+</div>
+
+
+</div>
+
+        
+    
+</div>
+</div>
+</div>
+<div class="moto-widget moto-widget-row row-gutter-0 moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-grid-type="xs" data-widget="row" data-spacing="masa" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-xs-2 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+<div data-widget-id="wid_1559743600_q2lfbnq74" class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-default  moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto  " data-widget="image">
+                <span class="moto-widget-image-link" style="    background: #cc2120;
+    border: 7px solid #f5d3d2;
+    border-radius: 73%;
+    width: 87%;">
+
+        <img data-src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-icon1.png" src="https://webstockreview.net/images/music-icon-png-10.png" class="moto-widget-image-picture moto-widget-deferred-content lazyloaded" data-id="146" title="" alt="" style="
+filter: invert(1);
+    width: 85%;">
+    </span>
+    </div></div><div class="moto-widget moto-widget-row__column moto-cell col-xs-10 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+<div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-small" data-widget="text" data-preset="default" data-spacing="aaas" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><h3 class="moto-text_system_7">Personalized Music Experience</h3><p class="moto-text_normal">&nbsp;</p><p class="moto-text_normal">Goes beyond generic playlists by tailoring music to your current emotional state.</p></div>
+</div></div>
+
+        
+    
+</div>
+</div>
+</div>
+<div class="moto-widget moto-widget-row row-gutter-0 moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto" data-grid-type="xs" data-widget="row" data-spacing="sama" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-xs-2 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+
+    <div data-widget-id="wid_1559743697_28f3v1ivk" class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-default  moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto  " data-widget="image">
+                <span class="moto-widget-image-link">
+                    <img data-src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-icon3.png" src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-icon3.png" class="moto-widget-image-picture moto-widget-deferred-content lazyloaded" data-id="147" title="" alt="">
+    </span>
+    </div>
+
+
+</div>
+
+        
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-xs-10 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+
+    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-small" data-widget="text" data-preset="default" data-spacing="aaas" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><h3 class="moto-text_system_7">Distance Counter</h3><p class="moto-text_normal">&nbsp;</p><p class="moto-text_normal">Progressively visualize client-centered core competencies vis-a-vis ubiquitous relationships. Synergistically opportunities.</p></div>
+</div>
+
+
+</div>
+
+        
+    
+</div>
+</div>
+</div><div data-widget-id="wid_1559743749_fsxlfgeqf" class="moto-widget moto-widget-spacer moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto moto-visible-on_tablet_hidden moto-visible-on_mobile-h_hidden moto-visible-on_mobile-v_hidden" data-widget="spacer" data-preset="default" data-spacing="sasa" data-visible-on="+desktop">
+<div class="moto-widget-spacer-block" style="height:5px"></div>
+</div></div>
+
+        
+    
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div><div class="moto-widget moto-widget-block moto-bg-color2_3 moto-background-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="block" data-spacing="aaaa" style="background-image:url(https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-bg5.png);background-position:left bottom;background-repeat:no-repeat;background-size:contain;" data-bg-position="left bottom" data-bg-image="2019/06/mt-1829-home-bg5.png"><a class="moto-anchor" name="ads bar"></a>
+
+
+<div class="container-fluid">
+<div class="row">
+    <div class="moto-cell col-sm-12" data-container="container">
+        
+    <div class="moto-widget moto-widget-container moto-container_content_5cf7ce8c3" data-widget="container" data-container="container" data-css-name="moto-container_content_5cf7ce8c3" data-bg-position="right top">
+
+
+
+<div class="moto-widget moto-widget-row row-fixed moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="laaa" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-12 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+<div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aasa" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><h2 style="text-align: center;" class="moto-text_204">Description With Video</h2></div>
+</div><div class="moto-widget moto-widget-row moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="sasa" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-2 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+</div><div class="moto-widget moto-widget-row__column moto-cell col-sm-8 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+<div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aaaa" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><p style="text-align: center;" class="moto-text_system_9">Our software platform and custom development allow healthcare&nbsp; institutions to create comprehensive cross-platform&nbsp; solutions that ensure positive patient experiences.</p></div>
+</div></div><div class="moto-widget moto-widget-row__column moto-cell col-sm-2 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+</div>
+
+        
+    
+</div>
+</div>
+</div>
+<div data-widget-id="wid_1559744319_rniumujlb" class="moto-widget moto-widget-button moto-preset-5 moto-preset-provider-default moto-align-center moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="button">
+    <a href="#" id="openVideo" class="moto-widget-button-link moto-size-medium moto-link"><span class="fa moto-widget-theme-icon"></span><span class="moto-widget-button-divider"></span><span class="moto-widget-button-label">Open Video</span></a>
+</div>
+
+<div id="videoOverlay" class="overlay">
+    <div class="video-container">
+        <video id="videoPlayer" controls  width="95%" height="350px"">
+            <source src="demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <span id="closeBtn" class="close-btn">&times;</span>
+    </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var openBtn = document.getElementById('openVideo');
+    var videoOverlay = document.getElementById('videoOverlay');
+    var videoPlayer = document.getElementById('videoPlayer');
+    var closeBtn = document.getElementById('closeBtn');
+
+    openBtn.addEventListener('click', function() {
+        videoOverlay.style.display = 'flex';
+    });
+
+    closeBtn.addEventListener('click', function() {
+        videoPlayer.pause(); // Pause the video when closing
+        videoOverlay.style.display = 'none';
+    });
+});
+</script>
+<div class="moto-widget moto-widget-row moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="xs" data-widget="row" data-spacing="maaa" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-xs-2 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+</div><div class="moto-widget moto-widget-row__column moto-cell col-xs-8 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+<div data-widget-id="wid_1559744346_y0idb38od" class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-default moto-align-center moto-spacing-top-auto moto-spacing-right-medium moto-spacing-bottom-auto moto-spacing-left-medium  " data-widget="image">
+                <span class="moto-widget-image-link">
+        <img data-src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-watch4.png" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0  '%3E%3C/svg%3E" class="moto-widget-image-picture moto-widget-deferred-content lazyload" data-id="165" title="" alt="">
+    </span>
+    </div></div><div class="moto-widget moto-widget-row__column moto-cell col-xs-2 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+</div>
+
+        
+    
+</div>
+</div>
+</div></div>
+
+        
+    
+</div>
+</div>
+</div></div></div>
+</div>
+</div>
+</div><div class="moto-widget moto-widget-block moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-large moto-spacing-left-auto" data-widget="block" data-spacing="lala" style="" data-bg-position="left top"><a class="moto-anchor" name="team"></a>
+
+
+<div class="container-fluid">
+<div class="row">
+    <div class="moto-cell col-sm-12" data-container="container">
+        
+    <div class="moto-widget moto-widget-row row-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="aaaa" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-12 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+<div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aaaa" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><p class="moto-text_system_8" style="text-align: center;">OUR TEAM</p><h2 class="moto-text_system_6" style="text-align: center;">Meet Our Team</h2></div>
+</div></div>
+
+        
+    
+</div>
+</div>
+</div><div class="moto-widget moto-widget-row row-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="aaaa" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-4 moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="maaa" data-bg-position="left top">
+
+
+<div class="moto-widget moto-widget-container moto-container_content_5cf7d23c4" data-widget="container" data-container="container" data-css-name="moto-container_content_5cf7d23c4" data-bg-position="left top">
+
+
+
+<div data-widget-id="wid_1559745167_6vs4krosy" class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-3 moto-align-center moto-spacing-top-medium moto-spacing-right-small moto-spacing-bottom-small moto-spacing-left-small  " data-widget="image">
+                <span class="moto-widget-image-link">
+        <img data-src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-team1.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0  '%3E%3C/svg%3E" class="moto-widget-image-picture moto-widget-deferred-content lazyload" data-id="156" title="" alt="">
+    </span>
+    </div><div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-small moto-spacing-bottom-auto moto-spacing-left-small" data-widget="text" data-preset="default" data-spacing="asas" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><h3 style="text-align: center;" class="moto-text_system_7">Alexandra Smiths</h3><p style="text-align: center;" class="moto-text_normal"><em>Manager</em></p></div>
+</div><div data-widget-id="wid_1559745274_dyh87t8ff" class="moto-widget moto-widget-divider moto-preset-2 moto-align-center moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto  " data-widget="divider_horizontal" data-preset="2">
+<hr class="moto-widget-divider-line" style="max-width:100%;width:50px;">
+</div><div class="moto-widget moto-widget-row row-gutter-0 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="aama" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-1 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+</div><div class="moto-widget moto-widget-row__column moto-cell col-sm-10 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+<div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-small moto-spacing-bottom-auto moto-spacing-left-small" data-widget="text" data-preset="default" data-spacing="asas" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><p style="text-align: center;" class="moto-text_system_10">Graduating with a degree in Spanish, English and French, Alexandra has always loved writing.</p></div>
+</div></div><div class="moto-widget moto-widget-row__column moto-cell col-sm-1 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+</div>
+
+        
+    
+</div>
+</div>
+</div></div></div>
+
+        
+    
+<div class="moto-widget moto-widget-row__column moto-cell col-sm-4 moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="maaa" data-bg-position="left top">
+
+
+
+    <div class="moto-widget moto-widget-container moto-container_content_5cf7d3805" data-widget="container" data-container="container" data-css-name="moto-container_content_5cf7d3805" data-bg-position="left top">
+
+
+
+
+    <div data-widget-id="wid_1559745408_n6yuq76pm" class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-3 moto-align-center moto-spacing-top-medium moto-spacing-right-small moto-spacing-bottom-small moto-spacing-left-small  " data-widget="image">
+                <span class="moto-widget-image-link">
+        <img data-src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-team2.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0  '%3E%3C/svg%3E" class="moto-widget-image-picture moto-widget-deferred-content lazyload" data-id="157" title="" alt="">
+    </span>
+    </div>
+
+
+
+    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-small moto-spacing-bottom-auto moto-spacing-left-small" data-widget="text" data-preset="default" data-spacing="asas" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><h3 style="text-align: center;" class="moto-text_system_7">Johnathan Hawkins</h3><p style="text-align: center;" class="moto-text_normal"><em>Сo-founder</em></p></div>
+</div>
+
+
+
+    <div data-widget-id="wid_1559745408_3beegrnl8" class="moto-widget moto-widget-divider moto-preset-2 moto-align-center moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto  " data-widget="divider_horizontal" data-preset="2">
+<hr class="moto-widget-divider-line" style="max-width:100%;width:50px;">
+</div>
+
+
+
+    <div class="moto-widget moto-widget-row row-gutter-0 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="aama" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-1 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+</div>
+
+        
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-10 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+
+    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-small moto-spacing-bottom-auto moto-spacing-left-small" data-widget="text" data-preset="default" data-spacing="asas" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><p style="text-align: center;" class="moto-text_system_10">Johnathan is our co-founder and has developed search strategies for a variety of clients for over 5 years.</p></div>
+</div>
+
+
+</div>
+
+        
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-1 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+</div>
+
+        
+    
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+</div><div class="moto-widget moto-widget-row__column moto-cell col-sm-4 moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="maaa" data-bg-position="left top">
+
+
+
+    <div class="moto-widget moto-widget-container moto-container_content_5cf7d3826" data-widget="container" data-container="container" data-css-name="moto-container_content_5cf7d3826" data-bg-position="left top">
+
+
+
+
+    <div data-widget-id="wid_1559745410_dlr19j1na" class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-3 moto-align-center moto-spacing-top-medium moto-spacing-right-small moto-spacing-bottom-small moto-spacing-left-small  " data-widget="image">
+                <span class="moto-widget-image-link">
+        <img data-src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-team3.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0  '%3E%3C/svg%3E" class="moto-widget-image-picture moto-widget-deferred-content lazyload" data-id="158" title="" alt="">
+    </span>
+    </div>
+
+
+
+    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-small moto-spacing-bottom-auto moto-spacing-left-small" data-widget="text" data-preset="default" data-spacing="asas" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><h3 style="text-align: center;" class="moto-text_system_7">Andres Johanson</h3><p style="text-align: center;" class="moto-text_normal"><em>Manager</em></p></div>
+</div>
+
+
+
+    <div data-widget-id="wid_1559745410_e4r0hzalu" class="moto-widget moto-widget-divider moto-preset-2 moto-align-center moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto  " data-widget="divider_horizontal" data-preset="2">
+<hr class="moto-widget-divider-line" style="max-width:100%;width:50px;">
+</div>
+
+
+
+    <div class="moto-widget moto-widget-row row-gutter-0 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="aama" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-1 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+</div>
+
+        
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-10 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+
+    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-small moto-spacing-bottom-auto moto-spacing-left-small" data-widget="text" data-preset="default" data-spacing="asas" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><p style="text-align: center;" class="moto-text_system_10">Andres fell in love with marketing at the university and looks forward to being part of this industry for many years.</p></div>
+</div>
+
+
+</div>
+
+        
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-1 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+</div>
+
+        
+    
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+</div></div>
+</div>
+</div></div>
+</div>
+</div>
+</div><div class="moto-widget moto-widget-block moto-bg-color2_3 moto-background-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="block" data-spacing="aaaa" style="background-image:url(https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-bg7.png);background-position:left bottom;background-repeat:no-repeat;background-size:contain;" data-bg-position="left bottom" data-bg-image="2019/06/mt-1829-home-bg7.png"><a class="moto-anchor" name="benefits"></a>
+
+
+<div class="container-fluid">
+<div class="row">
+    <div class="moto-cell col-sm-12" data-container="container">
+        
+    <div class="moto-widget moto-widget-row row-fixed moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="laaa" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-12 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+<div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aaaa" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><p class="moto-text_system_8" style="text-align: center;"><span class="moto-color5_5">KNOW YOURSELF</span></p><h2 class="moto-text_204" style="text-align: center;">Know your health</h2></div>
+</div><div class="moto-widget moto-widget-row moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="aama" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-4 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+<div data-widget-id="wid_1559745860_byr1nyal3" class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-default moto-align-center moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto  " data-widget="image">
+                <span class="moto-widget-image-link">
+        <img data-src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-icon4.png" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0  '%3E%3C/svg%3E" class="moto-widget-image-picture moto-widget-deferred-content lazyload" data-id="148" title="" alt="">
+    </span>
+    </div><div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="saaa" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><h3 class="moto-text_208" style="text-align: center;">Sleep Quality Monitor</h3><p style="text-align: center;" class="moto-text_normal">&nbsp;</p><p style="text-align: center;" class="moto-text_normal"><span class="moto-color5_1">Progressively expedite bleeding-edge catalysts for change via resource sucking channels. Energistically expedite.</span></p></div>
+</div></div>
+
+        
+    
+<div class="moto-widget moto-widget-row__column moto-cell col-sm-4 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+
+    <div data-widget-id="wid_1559745983_s3fvxkge6" class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-default moto-align-center moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto  " data-widget="image">
+                <span class="moto-widget-image-link">
+        <img data-src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-icon5.png" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0  '%3E%3C/svg%3E" class="moto-widget-image-picture moto-widget-deferred-content lazyload" data-id="150" title="" alt="">
+    </span>
+    </div>
+
+
+
+    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="saaa" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><h3 class="moto-text_208" style="text-align: center;">Wi-Fi Data Sync</h3><p style="text-align: center;" class="moto-text_normal">&nbsp;</p><p style="text-align: center;" class="moto-text_normal"><span class="moto-color5_1">Dynamically transform multimedia based portals vis-a-vis proactive e-commerce. Rapidiously plagiarize extensible.</span></p></div>
+</div>
+
+
+</div><div class="moto-widget moto-widget-row__column moto-cell col-sm-4 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+
+    <div data-widget-id="wid_1559745984_7ujwtjs16" class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-default moto-align-center moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto  " data-widget="image">
+                <span class="moto-widget-image-link">
+        <img data-src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-icon6.png" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0  '%3E%3C/svg%3E" class="moto-widget-image-picture moto-widget-deferred-content lazyload" data-id="149" title="" alt="">
+    </span>
+    </div>
+
+
+
+    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="saaa" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><h3 class="moto-text_208" style="text-align: center;">Weather Update</h3><p style="text-align: center;" class="moto-text_normal">&nbsp;</p><p style="text-align: center;" class="moto-text_normal"><span class="moto-color5_1">Intrinsicly monetize integrated e-markets whereas standardized communities. Assertively network front-end results.</span></p></div>
+</div>
+
+
+</div></div>
+</div>
+</div><div data-widget-id="wid_1559746074_bdi7q3wtw" class="moto-widget moto-widget-image moto-widget_with-deferred-content moto-preset-default moto-align-center moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto  " data-widget="image">
+                <span class="moto-widget-image-link">
+        <img data-src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-watch2.png" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0  '%3E%3C/svg%3E" class="moto-widget-image-picture moto-widget-deferred-content lazyload" data-id="163" title="" alt="">
+    </span>
+    </div></div>
+
+        
+    
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>            
+<div class="moto-widget moto-widget-block moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-large moto-spacing-left-auto" data-widget="block" data-spacing="lala" style="" data-bg-position="left top"><a class="moto-anchor" name="testimonials"></a>
+
+
+<div class="container-fluid">
+<div class="row">
+    <div class="moto-cell col-sm-12" data-container="container">
+        
+            
+                <div class="moto-widget moto-widget-row row-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="aaaa" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-12 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+
+    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aaaa" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><p class="moto-text_system_8" style="text-align: center;">TESTIMONIALS</p><h2 class="moto-text_system_6" style="text-align: center;">10k+ Customer Trust Us</h2></div>
+</div>
+
+
+</div>
+
+        
+    
+</div>
+</div>
+</div><div class="moto-widget moto-widget-row row-fixed moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="maaa" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-2 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+</div><div class="moto-widget moto-widget-row__column moto-cell col-sm-8 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+<div data-widget-id="wid_1559746218_mjgo7supr" class="moto-widget moto-widget-slider moto-widget-carousel moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="carousel" data-preset="default">
+    <div class="loading-block">
+    <div class="loading-circle"><div></div></div>
+    <div class="loading-circle"><div></div></div>
+    <div class="loading-circle"><div></div></div>
+    <div class="loading-circle"><div></div></div>
+</div>
+<div class="carousel-block">
+    <div class="bx-wrapper" style="max-width: 600px;"><div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 338px;"><div class="moto-widget-carousel-list" data-moto-carousel-options="{&quot;slideshowEnabled&quot;:true,&quot;slideshowDelay&quot;:5,&quot;showNextPrev&quot;:false,&quot;showPaginationDots&quot;:true,&quot;slideWidth&quot;:600,&quot;minSlides&quot;:1,&quot;maxSlides&quot;:1,&quot;moveSlides&quot;:1,&quot;margins&quot;:20,&quot;itemsCount&quot;:3}" style="width: 3215%; position: relative; transition-duration: 0s; transform: translate3d(-1860px, 0px, 0px);"><div class="moto-widget-carousel-item bx-clone" aria-hidden="true" style="height: 338px; float: left; list-style: none; position: relative; width: 600px; margin-right: 20px;">
+                <a class="moto-widget-carousel-link moto-link"><img src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-testimonials3.png" alt="mt-1829-home-testimonials3.png"></a>
+                                            <div class="moto-widget-carousel-caption moto-widget-text"><p style="text-align: center;" class="moto-text_system_12">&nbsp;</p><p style="text-align: center;" class="moto-text_system_12"><span class="moto-color1_3"><span class="fa"></span></span></p><p style="text-align: center;" class="moto-text_system_12">&nbsp;</p><p style="text-align: center;" class="moto-text_system_12">The attention of a traveller, should be particularly turned, in the first place, to the various works of Nature, to mark the distinctions of the climates he may explore, and to offer such useful observations on the different productions as may occur.</p><p style="text-align: center;" class="moto-text_system_12">&nbsp;</p><h3 style="text-align: center;" class="moto-text_system_7">Alexandra Smith</h3><p style="text-align: center;" class="moto-text_system_10"><span class="moto-color1_3">Magazine Editor</span></p></div>
+                                    </div>
+                            <div class="moto-widget-carousel-item" aria-hidden="true" style="height: 338px; float: left; list-style: none; position: relative; width: 600px; margin-right: 20px;">
+                <a class="moto-widget-carousel-link moto-link"><img src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-testimonials1.png" alt="mt-1829-home-testimonials1.png"></a>
+                                            <div class="moto-widget-carousel-caption moto-widget-text"><p style="text-align: center;" class="moto-text_system_12">&nbsp;</p><p style="text-align: center;" class="moto-text_system_12"><span class="moto-color1_3"><span class="fa"></span></span></p><p style="text-align: center;" class="moto-text_system_12">&nbsp;</p><p style="text-align: center;" class="moto-text_system_12">The attention of a traveller, should be particularly turned, in the first place, to the various works of Nature, to mark the distinctions of the climates he may explore, and to offer such useful observations on the different productions as may occur.</p><p style="text-align: center;" class="moto-text_system_12">&nbsp;</p><h3 style="text-align: center;" class="moto-text_system_7">Jennifer Smith</h3><p style="text-align: center;" class="moto-text_system_10"><span class="moto-color1_3">Web Designer</span></p></div>
+                                    </div>
+                            <div class="moto-widget-carousel-item" aria-hidden="true" style="height: 338px; float: left; list-style: none; position: relative; width: 600px; margin-right: 20px;">
+                <a class="moto-widget-carousel-link moto-link"><img src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-testimonials2.png" alt="mt-1829-home-testimonials2.png"></a>
+                                            <div class="moto-widget-carousel-caption moto-widget-text"><p style="text-align: center;" class="moto-text_system_12">&nbsp;</p><p style="text-align: center;" class="moto-text_system_12"><span class="moto-color1_3"><span class="fa"></span></span></p><p style="text-align: center;" class="moto-text_system_12">&nbsp;</p><p style="text-align: center;" class="moto-text_system_12">The attention of a traveller, should be particularly turned, in the first place, to the various works of Nature, to mark the distinctions of the climates he may explore, and to offer such useful observations on the different productions as may occur.</p><p style="text-align: center;" class="moto-text_system_12">&nbsp;</p><h3 style="text-align: center;" class="moto-text_system_7">John Doe</h3><p style="text-align: center;" class="moto-text_system_10"><span class="moto-color1_3">General Manager</span></p></div>
+                                    </div>
+                            <div class="moto-widget-carousel-item" aria-hidden="false" style="height: 338px; float: left; list-style: none; position: relative; width: 600px; margin-right: 20px;">
+                <a class="moto-widget-carousel-link moto-link"><img src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-testimonials3.png" alt="mt-1829-home-testimonials3.png"></a>
+                                            <div class="moto-widget-carousel-caption moto-widget-text"><p style="text-align: center;" class="moto-text_system_12">&nbsp;</p><p style="text-align: center;" class="moto-text_system_12"><span class="moto-color1_3"><span class="fa"></span></span></p><p style="text-align: center;" class="moto-text_system_12">&nbsp;</p><p style="text-align: center;" class="moto-text_system_12">The attention of a traveller, should be particularly turned, in the first place, to the various works of Nature, to mark the distinctions of the climates he may explore, and to offer such useful observations on the different productions as may occur.</p><p style="text-align: center;" class="moto-text_system_12">&nbsp;</p><h3 style="text-align: center;" class="moto-text_system_7">Alexandra Smith</h3><p style="text-align: center;" class="moto-text_system_10"><span class="moto-color1_3">Magazine Editor</span></p></div>
+                                    </div>
+                    <div class="moto-widget-carousel-item bx-clone" aria-hidden="true" style="height: 338px; float: left; list-style: none; position: relative; width: 600px; margin-right: 20px;">
+                <a class="moto-widget-carousel-link moto-link"><img src="https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-testimonials1.png" alt="mt-1829-home-testimonials1.png"></a>
+                                            <div class="moto-widget-carousel-caption moto-widget-text"><p style="text-align: center;" class="moto-text_system_12">&nbsp;</p><p style="text-align: center;" class="moto-text_system_12"><span class="moto-color1_3"><span class="fa"></span></span></p><p style="text-align: center;" class="moto-text_system_12">&nbsp;</p><p style="text-align: center;" class="moto-text_system_12">The attention of a traveller, should be particularly turned, in the first place, to the various works of Nature, to mark the distinctions of the climates he may explore, and to offer such useful observations on the different productions as may occur.</p><p style="text-align: center;" class="moto-text_system_12">&nbsp;</p><h3 style="text-align: center;" class="moto-text_system_7">Jennifer Smith</h3><p style="text-align: center;" class="moto-text_system_10"><span class="moto-color1_3">Web Designer</span></p></div>
+                                    </div></div></div><div class="bx-controls bx-has-pager"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link">1</a></div><div class="bx-pager-item"><a href="" data-slide-index="1" class="bx-pager-link">2</a></div><div class="bx-pager-item"><a href="" data-slide-index="2" class="bx-pager-link active">3</a></div></div></div></div>
+</div>
+</div></div><div class="moto-widget moto-widget-row__column moto-cell col-sm-2 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+</div>
+
+        
+    
+</div>
+</div>
+</div>
+            
+        
+            
+                
+            
+        
+    </div>
+</div>
+</div>
+</div><div class="moto-widget moto-widget-block moto-bg-color2_3 moto-background-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="block" data-spacing="aaaa" style="background-image:url(https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-bg8.png);background-position:right top;background-repeat:no-repeat;background-size:contain;" data-bg-position="right top" data-bg-image="2019/06/mt-1829-home-bg8.png">
+
+
+<div class="container-fluid">
+<div class="row">
+    <div class="moto-cell col-sm-12" data-container="container">
+        
+    <div class="moto-widget moto-widget-container moto-container_content_5cf7d82710" data-widget="container" data-container="container" data-css-name="moto-container_content_5cf7d82710" data-bg-position="left bottom">
+
+
+
+<div class="moto-widget moto-widget-row row-fixed moto-justify-content_center moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="aaaa" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-6 moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="mama" data-bg-position="left top">
+
+
+<div data-widget-id="wid_1559746925_05pl9iyz4" class="moto-widget moto-widget-spacer moto-preset-default moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto moto-visible-on_mobile-h_hidden moto-visible-on_mobile-v_hidden" data-widget="spacer" data-preset="default" data-spacing="mama" data-visible-on="+desktop,tablet">
+<div class="moto-widget-spacer-block" style="height:20px"></div>
+</div><div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aaaa" data-visible-on="mobile-v" data-animation="" data-draggable-disabled="">
+<div class="moto-widget-text-content moto-widget-text-editable"><p class="moto-text_system_5">Get The App <span class="moto-color1_3">Now !</span><br></p></div>
+</div><div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-small moto-spacing-right-medium moto-spacing-bottom-small moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="smsa" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><p class="moto-text_system_9">Seamlessly transform timely e-commerce for diverse leadership skills. Conveniently reconceptualize go forward expertise without extensible applications. Phosfluorescently.</p></div>
+</div><div data-widget-id="wid_1559746871_pvifsjh1g" class="moto-widget moto-widget-button moto-preset-default moto-preset-provider-default moto-align-left moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto  " data-widget="button">
+    <a href="#" data-action="popup" data-popup-id="8" class="moto-widget-button-link moto-size-medium moto-link"><span class="fa moto-widget-theme-icon"></span><span class="moto-widget-button-divider"></span><span class="moto-widget-button-label">BUY NOW</span></a>
+</div><div data-widget-id="wid_1559746952_cucbzl821" class="moto-widget moto-widget-spacer moto-preset-default moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto moto-visible-on_mobile-h_hidden moto-visible-on_mobile-v_hidden" data-widget="spacer" data-preset="default" data-spacing="mama" data-visible-on="+desktop,tablet">
+<div class="moto-widget-spacer-block" style="height:20px"></div>
+</div></div><div class="moto-widget moto-widget-row__column moto-cell col-sm-6 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="background-image:url(https://template82058.motopreview.com/mt-demo/82000/82058/mt-content/uploads/2019/06/mt-1829-home-watch3.png);background-position:top;background-repeat:no-repeat;background-size:cover;" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="top" data-bg-image="2019/06/mt-1829-home-watch3.png">
+
+
+<div data-widget-id="wid_1559746680_lrjnov3iz" class="moto-widget moto-widget-spacer moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto " data-widget="spacer" data-preset="default" data-spacing="aaaa" data-visible-on="+desktop,tablet,mobile-h,mobile-v">
+<div class="moto-widget-spacer-block" style="height:300px"></div>
+</div></div>
+
+        
+    
+</div>
+</div>
+</div></div></div>
+</div>
+</div>
+</div>            
+<div class="moto-widget moto-widget-block moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-large moto-spacing-left-auto" data-widget="block" data-spacing="lala" style="" data-bg-position="left top"><a class="moto-anchor" name="contacts"></a>
+
+
+<div class="container-fluid">
+<div class="row">
+    <div class="moto-cell col-sm-12" data-container="container">
+        
+            
+                <div class="moto-widget moto-widget-row row-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="aaaa" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-12 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+
+    <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aaaa" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><p class="moto-text_system_8" style="text-align: center;">CONTACT US</p><h2 class="moto-text_system_6" style="text-align: center;">Get in touch</h2></div>
+</div>
+
+
+</div>
+
+        
+    
+</div>
+</div>
+</div><div class="moto-widget moto-widget-row row-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-grid-type="sm" data-widget="row" data-spacing="aaaa" style="" data-bg-position="left top">
+
+
+<div class="container-fluid">
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-6 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+<div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-medium moto-spacing-right-medium moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="mmaa" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><p class="moto-text_normal"><span class="moto-color3_3">It's very easy to get in touch with us. Just use the contact form or pay us a visit for a coffee at the office. Dynamically innovate competitive technology after an expanded array of leadership.</span></p></div>
+</div><div data-widget-id="wid_1559801022_qswl6ip6i" class="moto-widget moto-widget-spacer moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto " data-widget="spacer" data-preset="default" data-spacing="sasa" data-visible-on="+desktop,tablet,mobile-h,mobile-v">
+<div class="moto-widget-spacer-block" style="height:10px"></div>
+</div><div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aaaa" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><h3 class="moto-text_system_7">Head Office</h3></div>
+</div><div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="saaa" data-visible-on="mobile-v" data-animation="">
+<div class="moto-widget-text-content moto-widget-text-editable"><p class="moto-text_normal"><span class="moto-color1_3"><span class="fa fa-fw"></span></span>&nbsp;Harmony Beats ,Near Veer Desai Industrial Estate, Andheri West</p><p class="moto-text_normal">&nbsp;</p><p class="moto-text_normal"><span class="moto-color1_3"><span class="fa fa-fw"></span></span>&nbsp; Phone: <a data-action="call" class="moto-link" href="tel:1234567890">022 2673 4165</a></p><p class="moto-text_normal">&nbsp;</p><p class="moto-text_system_13"><span class="moto-color1_3"><span class="fa fa-fw"></span></span>&nbsp; E-mail: <a data-action="mail" class="moto-link" href="mailto:office@yourdomain.com">contactoffice@harmonybeat.com</a></p></div>
+</div></div><div class="moto-widget moto-widget-row__column moto-cell col-sm-6 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+<div id="wid_1559801331_e64osqywl" class="moto-widget moto-widget-contact_form moto-preset-default moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto  " data-preset="default" data-widget="contact_form" data-spacing="maaa">
+<div ng-controller="widget.ContactForm.Controller" ng-init="hash = '2@eyJoIjoiMk9pdTQ2ZE5oeFBaMGtlRExDMkhycGd0TkdhUnAyRXRaanUzWlgrb2ZcL3M9IiwiaSI6IndlU2dLMnlFVXU5UHdTQSs5dG1ZN3c9PSIsInYiOiJQdHVHbE5YdFdFK05cL21QblwvMUZ3Y01VT29tbHJiY2l5RUtacWVDMlZJXC9yVHgxajJyNDB4RUFxeWZsYjZUKzIrXC80b293a25RYTRUTVlLazBmOXplOUdGTjJsT1g3S0tIb0ZIeHNLeDZsalE9In0=';actionAfterSubmission={&quot;action&quot;:&quot;none&quot;,&quot;url&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;id&quot;:&quot;&quot;};resetAfterSubmission=false">
+        <form id="wid_1559801331_e64osqywl__form" class="moto-widget-contact_form-form ng-pristine ng-invalid ng-invalid-required" role="form" name="contactForm" ng-submit="submit()" novalidate="">
+    <div ng-show="sending" class="contact-form-loading ng-hide"></div>
+
+                                                                                                <div class="moto-widget-contact_form-group">
+                    <label for="field_name_wid_1559801331_e64osqywl" class="moto-widget-contact_form-label">Your Name ...</label>
+                    <input type="text" class="moto-widget-contact_form-field moto-widget-contact_form-input ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" placeholder="Your Name ... *" ng-blur="validate('name')" required="" ng-model-options="{ updateOn: 'blur' }" name="name" id="field_name_wid_1559801331_e64osqywl" ng-model="message.name">
+                                                    <span class="moto-widget-contact_form-field-error ng-hide" ng-show="contactForm.name.$invalid &amp;&amp; !contactForm.name.$pristine &amp;&amp; !contactForm.name.emailInvalid">Field is required</span>
+                                                                            </div>
+                            
+                                                                                                <div class="moto-widget-contact_form-group">
+                    <label for="field_email_wid_1559801331_e64osqywl" class="moto-widget-contact_form-label">Your E-mail ...</label>
+                    <input type="text" class="moto-widget-contact_form-field moto-widget-contact_form-input ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" placeholder="Your E-mail ... *" ng-blur="validate('email')" required="" ng-model-options="{ updateOn: 'blur' }" name="email" id="field_email_wid_1559801331_e64osqywl" ng-model="message.email">
+                                                    <span class="moto-widget-contact_form-field-error ng-hide" ng-show="contactForm.email.$invalid &amp;&amp; !contactForm.email.$pristine &amp;&amp; !contactForm.email.emailInvalid">Field is required</span>
+                                                            <span class="moto-widget-contact_form-field-error ng-hide" ng-show="contactForm.email.emailInvalid &amp;&amp; !contactForm.email.$pristine">Incorrect email</span>
+                                                                            </div>
+                            
+                                                    
+                                                    
+                                                    
+                                                    
+                                                                                                <div class="moto-widget-contact_form-group">
+                    <label for="field_message_wid_1559801331_e64osqywl" class="moto-widget-contact_form-label">Message ...</label>
+                    <textarea class="moto-widget-contact_form-field moto-widget-contact_form-textarea ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" rows="3" placeholder="Message ... *" ng-blur="validate('message')" required="" ng-model-options="{ updateOn: 'blur' }" name="message" id="field_message_wid_1559801331_e64osqywl" ng-model="message.message"></textarea>
+                                                    <span class="moto-widget-contact_form-field-error ng-hide" ng-show="contactForm.message.$invalid &amp;&amp; !contactForm.message.$pristine">Field is required</span>
+                                            </div>
+                            
+                                                    
+    
+                    <div class="moto-widget-contact_form-success ng-hide" ng-show="showSuccessMessage">
+            Your message was sent successfully
+        </div>
+        <div class="moto-widget-contact_form-danger ng-hide" ng-show="emailError">
+            Sorry, your message was not sent
+        </div>
+                <div class="moto-widget-contact_form-buttons">
+
+                                        <div data-widget-id="wid__button__65c792e7b36c3" class="moto-widget moto-widget-button moto-preset-default moto-preset-provider-default moto-align-left moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto  " data-widget="button">
+    <button type="submit" class="moto-widget-button-link moto-size-medium moto-link"><span class="fa moto-widget-theme-icon"></span><span class="moto-widget-button-divider"></span><span class="moto-widget-button-label">SEND</span></button>
+</div>
+                    
+    </div>
+</form>
+</div>
+</div></div>
+
+        
+    
+</div>
+</div>
+</div>
+            
+        
+            
+                
+            
+        
+    </div>
+</div>
+</div>
+</div>
+
+<div class="row" data-container="container">
+    
+        
+            <div class="moto-widget moto-widget-row__column moto-cell col-sm-12 moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" style="" data-widget="row.column" data-container="container" data-spacing="aaaa" data-bg-position="left top">
+
+
+<div style="font-family: 'Montserrat', sans-serif;background: #cc2120;
+    padding: 7px;
+    color: white;
+    text-align: center;">Copyright © 2024 Harmony Beat Watches</p></div>
+</div></div>
+
+        
+    
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>            
+</section>
+</div>
+
+
+
+
+        <div data-moto-back-to-top-button="" class="moto-back-to-top-button">
+<a ng-click="toTop($event)" class="moto-back-to-top-button-link">
+    <span class="moto-back-to-top-button-icon fa"></span>
+</a>
+</div>
+        
+<div data-moto-widget-callback="" class="moto-widget-callback moto-widget-callback_closed moto-preset-default">
+<div class="moto-widget-callback__wrapper">
+<div class="moto-widget-callback__open-button moto-widget-callback__thumbnail-wrapper moto-widget-callback__thumbnail-wrapper_icon">
+    <div class="moto-widget-callback__overlay moto-widget-callback__overlay_open-button"></div>
+                <div class="moto-widget-callback__thumbnail moto-widget-callback__thumbnail_icon fa fa-fw fa-phone"></div>
+
+</div>
+<div class="moto-widget-callback__body moto-widget-callback__body_more-details-enabled" style="display: none;">
+    <div class="moto-widget-callback__agent moto-widget-callback__thumbnail-wrapper moto-widget-callback__thumbnail-wrapper_image">
+                    <div class="moto-widget-callback__thumbnail moto-widget-callback__thumbnail_image" style="background-image: url(call.png);"></div>
+
+    </div>
+    <div class="moto-widget-callback__description moto-widget-text">
+        <p class="moto-text_system_7" style="text-align: center;">Smita Prakash</p><p class="moto-text_normal" style="text-align: center;"><em><span class="moto-color1_3">Product Agent</span></em></p><p class="moto-text_system_8" style="text-align: center;"><a class="moto-link" data-action="call" href="tel:919827321905"><span class="fa"></span> +91-9827321905</a></p>            </div>
+                    <div class="moto-widget-callback__more-details-wrapper">
+            <hr class="moto-widget-callback__more-details-divider">
+            <div class="moto-widget-callback__more-details">
+                                                            <div class="moto-widget-callback__more-details-item">
+                    <div class="moto-widget-callback__overlay moto-widget-callback__overlay_link"></div>
+                    <a href="https://t.me/#" class="moto-widget-callback__link moto-widget-callback__link-telegram_chat" title="Telegram" target="_blank"></a>
+                </div>
+                                                                                    <div class="moto-widget-callback__more-details-item">
+                    <div class="moto-widget-callback__overlay moto-widget-callback__overlay_link"></div>
+                    <a href="https://wa.me/#" class="moto-widget-callback__link moto-widget-callback__link-whatsapp_chat" title="WhatsApp" target="_blank"></a>
+                </div>
+                                                                                                                                <div class="moto-widget-callback__more-details-item">
+                    <div class="moto-widget-callback__overlay moto-widget-callback__overlay_link"></div>
+                    <a href="https://m.me/#" class="moto-widget-callback__link moto-widget-callback__link-fb_messenger_chat" title="Facebook Messenger" target="_blank"></a>
+                </div>
+                                                                                    <div class="moto-widget-callback__more-details-item">
+                    <div class="moto-widget-callback__overlay moto-widget-callback__overlay_link"></div>
+                    <a href="skype:#?chat" class="moto-widget-callback__link moto-widget-callback__link-skype_chat" title="Skype (Chat)" target="_blank"></a>
+                </div>
+                                                                                                                                                                                            </div>
+        </div>
+        <div class="moto-widget-callback__more-details-button-wrapper"><i class="moto-widget-callback__more-details-button fa fa-angle-down"></i></div>
+                <div class="moto-widget-callback__close-button fa fa-times"></div>
+</div>
+</div>
+</div>                <script type="text/javascript" data-cfasync="false">
+var websiteConfig = websiteConfig || {};
+websiteConfig.address = 'https://template82058.motopreview.com/';
+websiteConfig.relativeAddress = '/';
+websiteConfig.addressHash = 'fb5f6d088749a2d59458394d71a84af6';
+websiteConfig.apiUrl = '/api.php';
+websiteConfig.preferredLocale = 'en_US';
+websiteConfig.preferredLanguage = websiteConfig.preferredLocale.substring(0, 2);
+        websiteConfig.back_to_top_button = {"topOffset":300,"animationTime":500,"type":"theme"};
+        websiteConfig.popup_preferences = {"loading_error_message":"The content could not be loaded refresh."};
+websiteConfig.lazy_loading = {"enabled":true};
+websiteConfig.cookie_notification = {"enabled":false,"content":"<p class=\"moto-text_normal\">This website uses cookies to ensure you get the best experience on our website.<\/p>","content_hash":"6610aef7f7138423e25ee33c75f23279","controls":{"visible":"close,accept","accept":{"label":"Got it","preset":"default","size":"medium","cookie_lifetime":365}}};
+if (window.websiteConfig.lazy_loading && !window.websiteConfig.lazy_loading.enabled) {
+    window.lazySizesConfig = window.lazySizesConfig || {};
+    window.lazySizesConfig.preloadAfterLoad = true;
+}
+</script>
+<script src="https://template82058.motopreview.com/mt-includes/js/website.assets.min.js?_build=1659979209" type="text/javascript" data-cfasync="false"></script>
+<script type="text/javascript" data-cfasync="false">
+angular.module('website.plugins', []);
+</script>
+<script src="https://template82058.motopreview.com/mt-includes/js/website.min.js?_build=1659979201" type="text/javascript" data-cfasync="false"></script>
+
+        </body></html>
