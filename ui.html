@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smartwatch Menu Slider</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+    /* styles.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.menu {
+  width: 200px;
+
+  height: 200px;
+  display: block;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+background-image: url("https://debmcnaughton.com/cdn/shop/products/IntuitionJPEG_1242x2208.jpg?v=1607925618");
+}
+
+.menu-slider {
+  display: flex;
+  position: relative;
+  top: 37%;
+  transition: transform 0.5s ease;
+}
+
+#menuList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+#menuList li {
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.5s ease, scale 0.5s ease;
+}
+
+#menuList li img {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: #000;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+#menuList li.middle {
+  transform: scale(1.5);
+}
+
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <div class="menu-slider">
+      <ul id="menuList">
+        <li id="item1" onclick="redirectTo('https://sid0017.github.io/product/playlist.html')">
+          <img src="https://e7.pngegg.com/pngimages/169/794/png-clipart-ios-message-icon-iphone-message-computer-icons-text-messaging-messenger-electronics-grass.png" alt="App Icon 1">
+        </li>
+        <li id="item2" onclick="redirectTo('https://sid0017.github.io/product/playlist.html')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Apple_Music_icon.svg/2048px-Apple_Music_icon.svg.png" alt="App Icon 2">
+        </li>
+        <li id="item3" onclick="redirectTo('https://example.com')">
+          <img src="https://blog.gisplanning.com/hs-fs/hubfs/GoogleMaps-Icon-alone-1.png?width=600&name=GoogleMaps-Icon-alone-1.png" alt="App Icon 3">
+        </li>
+        <li id="item4" onclick="redirectTo('https://example.com')">
+          <img src="https://cdn.iconscout.com/icon/free/png-256/free-phone-1559-461603.png" alt="App Icon 4">
+        </li>
+        <li id="item5" onclick="redirectTo('https://example.com')">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/WhatsApp_icon.png/479px-WhatsApp_icon.png" alt="App Icon 5">
+        </li>
+      </ul>
+    </div>
+    <button class="prev" onclick="moveSlider(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlider(1)">&#10095;</button>
+  </div>
+
+  <script>
+// script.js
+// script.js
+// script.js
+let startX = 0;
+let slideIndex = 1; // Initialize slideIndex
+let isDragging = false;
+
+document.addEventListener('mousedown', startDrag);
+document.addEventListener('touchstart', startDrag);
+
+function startDrag(event) {
+  if (event.type === 'mousedown') {
+    startX = event.clientX;
+  } else if (event.type === 'touchstart') {
+    startX = event.touches[0].clientX;
+  }
+  
+  isDragging = true;
+
+  document.addEventListener('mousemove', drag);
+  document.addEventListener('touchmove', drag);
+  document.addEventListener('mouseup', endDrag);
+  document.addEventListener('touchend', endDrag);
+}
+
+function drag(event) {
+  if (!isDragging) return;
+
+  let currentX;
+
+  if (event.type === 'mousemove') {
+    currentX = event.clientX;
+  } else if (event.type === 'touchmove') {
+    currentX = event.touches[0].clientX;
+    event.preventDefault(); // Prevent scrolling on touch devices
+  }
+
+  const deltaX = currentX - startX;
+  moveSlider(deltaX > 0 ? -2 : 2);
+}
+
+function endDrag() {
+  isDragging = false;
+
+  document.removeEventListener('mousemove', drag);
+  document.removeEventListener('touchmove', drag);
+  document.removeEventListener('mouseup', endDrag);
+  document.removeEventListener('touchend', endDrag);
+}
+
+function moveSlider(n) {
+  slideIndex += n;
+  showSlides();
+}
+
+function showSlides() {
+  const slides = document.querySelector('.menu-slider');
+  const slideWidth = document.querySelector('#menuList li').offsetWidth;
+  const maxSlides = document.querySelectorAll('#menuList li').length;
+  if (slideIndex >= maxSlides) {
+    slideIndex = 0;
+  }
+  if (slideIndex < 0) {
+    slideIndex = maxSlides - 1;
+  }
+  slides.style.transform = `translateX(-${slideWidth * slideIndex}px)`;
+
+  const menuItems = document.querySelectorAll('#menuList li');
+  menuItems.forEach((item, index) => {
+    if (index === slideIndex) {
+      item.classList.add('middle');
+    } else {
+      item.classList.remove('middle');
+    }
+  });
+}
+
+function redirectTo(url) {
+  window.location.href = url;
+}
+
+// let slideIndex = 0;
+
+// function moveSlider(n) {
+//   slideIndex += n;
+//   showSlides();
+// }
+
+// function showSlides() {
+//   const slides = document.querySelector('.menu-slider');
+//   const slideWidth = document.querySelector('#menuList li').offsetWidth;
+//   const maxSlides = document.querySelectorAll('#menuList li').length;
+//   if (slideIndex >= maxSlides) {
+//     slideIndex = 0;
+//   }
+//   if (slideIndex < 0) {
+//     slideIndex = maxSlides - 1;
+//   }
+//   slides.style.transform = `translateX(-${slideWidth * slideIndex}px)`;
+
+//   const menuItems = document.querySelectorAll('#menuList li');
+//   menuItems.forEach((item, index) => {
+//     if (index === slideIndex) {
+//       item.classList.add('middle');
+//     } else {
+//       item.classList.remove('middle');
+//     }
+//   });
+// }
+
+// function redirectTo(url) {
+//   window.location.href = url;
+// }
+
+    
+  </script>
+</body>
+</html>
