@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Playlist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<style>
+
+
+body {
+    font-family: "Ubuntu", sans-serif;
+  background-color: #f0f0f0;
+  padding: 2px;
+  margin: 0;
+  height: 40px;
+}
+
+.playlist-container {
+  max-width: 300px; /* Adjust according to smartwatch screen size */
+  margin: 0 auto;
+  font-family: "Ubuntu", sans-serif;
+  height: 290px;
+  padding: 0px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+  
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  overflow-y:scroll;
+  overflow-x:scroll;
+
+}
+
+.playlist {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.playlist th,
+.playlist td {
+  padding: 5px;
+  font-size: 12px; /* Adjust font size for readability */
+  text-align: right;
+}
+
+.playlist thead {
+  background-color: #1db954;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1; /* Ensure the header stays on top of the scrolling content */
+}
+
+.playlist tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.playlist tbody tr:hover {
+  background-color: #e0e0e0;
+}
+
+.playlist tbody td:first-child,
+.playlist thead th:first-child {
+  width: 10%;
+}
+
+.playlist tbody td:nth-child(2),
+.playlist thead th:nth-child(2) {
+  width: 45%;
+}
+
+.playlist tbody td:nth-child(3),
+.playlist thead th:nth-child(3) {
+  width: 30%;
+}
+
+.playlist tbody td:nth-child(4),
+.playlist thead th:nth-child(4) {
+  width: 15%;
+}
+.song-info img{
+
+    width:40px ;
+    height:40px ;
+    border-radius: 5px;
+}
+.song-info{
+    display: flex;
+}
+
+</style>
+</head>
+<body>
+
+<div class="playlist-container">
+    <div class="you-play" style="
+    display: flex;
+    position: fixed;
+    z-index: 7;
+    align-items: center;
+    background: rgb(1, 1, 1);
+    color: white;
+    width: 300px;
+    top: 0px;
+    padding: 6px;
+"><img src="https://tse3.mm.bing.net/th?id=OIP.ijJu1PyvDY0MM2vCdpDCrwHaHa&amp;pid=Api&amp;P=0&amp;h=180" alt="" style="
+    width: 66px;border-radius: 40px;
+"><div class="title" width="50px" style="margin-left: 5px;">Your playList</div></div>
+    <table class="playlist">
+        <thead>
+            <tr style="
+          position: fixed;
+          top: 77px;
+          background: #1db954;
+          width: 300px;
+      ">
+              <th>Sr.</th>
+              <th>Title</th>
+              <th>Artist</th>
+              <th>Duration</th>
+            </tr>
+          </thead>
+        <tbody style="    position: relative;
+        top: 100px;">
+          <tr>
+            <td>1</td>
+            <td><div class="song-info">
+    <img src="https://i.scdn.co/image/ab67616d00001e021f00279071cc1ef6149a32be" alt="">
+    <p class="title" style="
+        /* font-size: 10px; */
+        margin-left: 3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    ">Hayyoda</p>
+            </div></td>
+            <td>Priya MAli</td>
+            <td>3:20</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><div class="song-info">
+    <img src="https://i.scdn.co/image/ab67616d00001e02dfe6cfcd34e433d548501824" alt="">
+    <p class="title" style="
+        /* font-size: 10px; */
+        margin-left: 3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    ">Ranjithame</p>
+            </div></td>
+            <td>Thala Vijay</td>
+            <td>3:55</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><div class="song-info">
+    <img src="https://i.scdn.co/image/ab67616d00001e021187a531854a765f273b6da6" alt="">
+    <p class="title" style="
+        /* font-size: 10px; */
+        margin-left: 3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    ">Appadipodu</p>
+            </div></td>
+            <td>KK|Anuradha</td>
+            <td>4:45</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><div class="song-info">
+    <img src="https://i.pinimg.com/736x/cd/6c/8f/cd6c8f834fce26428e62a46d2c27357b.jpg" alt="">
+    <p class="title" style="
+        /* font-size: 10px; */
+        margin-left: 3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    ">Bohemian Rhapsody</p>
+            </div></td>
+            <td>Queen</td>
+            <td>5:55</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><div class="song-info">
+    <img src="https://i.pinimg.com/736x/cd/6c/8f/cd6c8f834fce26428e62a46d2c27357b.jpg" alt="">
+    <p class="title" style="
+        /* font-size: 10px; */
+        margin-left: 3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    ">Bohemian Rhapsody</p>
+            </div></td>
+            <td>Queen</td>
+            <td>5:55</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><div class="song-info">
+    <img src="https://i.pinimg.com/736x/cd/6c/8f/cd6c8f834fce26428e62a46d2c27357b.jpg" alt="">
+    <p class="title" style="
+        /* font-size: 10px; */
+        margin-left: 3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    ">Bohemian Rhapsody</p>
+            </div></td>
+            <td>Queen</td>
+            <td>5:55</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td><div class="song-info">
+    <img src="https://i.pinimg.com/736x/cd/6c/8f/cd6c8f834fce26428e62a46d2c27357b.jpg" alt="">
+    <p class="title" style="
+        /* font-size: 10px; */
+        margin-left: 3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    ">Bohemian Rhapsody</p>
+            </div></td>
+            <td>Queen</td>
+            <td>5:55</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td><div class="song-info">
+    <img src="https://i.pinimg.com/736x/cd/6c/8f/cd6c8f834fce26428e62a46d2c27357b.jpg" alt="">
+    <p class="title" style="
+        /* font-size: 10px; */
+        margin-left: 3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    ">Bohemian Rhapsody</p>
+            </div></td>
+            <td>Queen</td>
+            <td>5:55</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td><div class="song-info">
+    <img src="https://i.pinimg.com/736x/cd/6c/8f/cd6c8f834fce26428e62a46d2c27357b.jpg" alt="">
+    <p class="title" style="
+        /* font-size: 10px; */
+        margin-left: 3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    ">Bohemian Rhapsody</p>
+            </div></td>
+            <td>Queen</td>
+            <td>5:55</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td><div class="song-info">
+    <img src="https://i.pinimg.com/736x/cd/6c/8f/cd6c8f834fce26428e62a46d2c27357b.jpg" alt="">
+    <p class="title" style="
+        /* font-size: 10px; */
+        margin-left: 3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    ">Bohemian Rhapsody</p>
+            </div></td>
+            <td>Queen</td>
+            <td>5:55</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="footer" style="display: flex; position: fixed; background-color: white; width: 290px;justify-content: space-evenly;top: 88%;">
+      <div class="profile" style="display: flex;"><img src="https://cdn2.iconfinder.com/data/icons/emoticons-flat-1/512/Emoji_emoticon_emoticons_emotion_happy_mood-512.png" alt="" width="35px" height="35px" title="Your Mood"></div>
+      <div class="liked"><img src="https://whatemoji.org/wp-content/uploads/2020/07/Red-Heart-Emoji.png" alt="" width="35px" title="Your Liked PlayList"></div>
+      <div class="analysis"><img src="https://cdn1.iconfinder.com/data/icons/feedback-and-testimonials-3/64/feedbackwarna-03-1024.png" alt="" width="35px" height="35px" title="Mood Analysis"></div>
+    </div>
+</body>
+</html>
